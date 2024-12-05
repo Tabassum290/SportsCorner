@@ -59,7 +59,7 @@ const handleMouseLeave = () => {
               {user && user?.email ? (
                 <div className="flex flex-col items-center">
                   <img
-                    className="w-8 rounded-full"
+                    className="w-12 rounded-3xl"
                     src={user?.photoURL}
                     alt="Profile"
                     onMouseEnter={handleMouseEnter}

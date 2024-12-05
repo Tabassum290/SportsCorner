@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA5cBkQA5SK51f5xWg-fVL8opONtbEMJUw",
-  authDomain: "sports-corner-cc0b3.firebaseapp.com",
-  projectId: "sports-corner-cc0b3",
-  storageBucket: "sports-corner-cc0b3.firebasestorage.app",
-  messagingSenderId: "646576982420",
-  appId: "1:646576982420:web:d1f88098a51fa873972781"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

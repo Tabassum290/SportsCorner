@@ -10,7 +10,11 @@ import MyEquipmentlist from './pages/MyEquipmentlist.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import AuthProvider from './Providers/AuthProvider.jsx'
-
+import PrivateRoute from './Private/PrivateRoute.jsx'
+import ViewDetails from './pages/ViewDetails.jsx'
+import Update from './pages/Update.jsx'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 const router = createBrowserRouter(
   [
     {
@@ -20,7 +24,7 @@ const router = createBrowserRouter(
     },
     {
       path:'/addequipment',
-      element:<Addequipment/>,
+      element:<PrivateRoute><Addequipment/></PrivateRoute>,
     },
     {
       path:'/allsportsequipment',
@@ -28,7 +32,7 @@ const router = createBrowserRouter(
     },
     {
       path:'/myequipmentlist',
-      element:<MyEquipmentlist/>,
+      element:<PrivateRoute><MyEquipmentlist/></PrivateRoute>,
     },
     {
       path:'/login',
@@ -38,12 +42,21 @@ const router = createBrowserRouter(
       path:'/register',
       element:<Register/>,
     },
+    {
+      path:'/viewdetails',
+      element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+    },
+    {
+      path:'/update',
+      element:<PrivateRoute><Update/></PrivateRoute>,
+    },
   ]
 )
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ToastContainer></ToastContainer>
     <AuthProvider>
     <RouterProvider router={router}></RouterProvider>
     </AuthProvider>

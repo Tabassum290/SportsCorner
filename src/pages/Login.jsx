@@ -1,12 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { AiFillGoogleCircle } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
-const {LoginUser,setUser} = useContext(AuthContext);
+const {LoginUser,setUser,loginWithGoogle} = useContext(AuthContext);
+const [error,setError] = useState({});
+const location = useLocation();
+const navigate = useNavigate();
+
     const handleLogin = e =>{
         e.preventDefault();
         const email = e.target.email.value;
@@ -17,12 +22,28 @@ const {LoginUser,setUser} = useContext(AuthContext);
 LoginUser (email,password)
 .then(result =>{
   setUser(result.user);
-  console.log(result.user)
+  navigate(location?.state? location.state : "/");
+  toast.success("Login Successfull. Welcome to Sports Equipment Store");
 })
-.catch(error=>{
-  console.log(error.code)
+.catch(err=>{
+setError({...error, login: err.code});
+toast.error("Login Failed. Please Try Again");
 })
-    }
+ }
+
+ const handleGoogleLogin = () => {
+      loginWithGoogle()
+        .then((result) => {
+          setUser(result.user);
+          toast.success('Successfully logged in with Google!');
+          const redirectPath = location?.state?.from?.pathname || '/';
+          navigate(redirectPath);
+        })
+        .catch((err) => {
+          toast.error(`Google login failed: ${err.message}`);
+        });
+    };
+  
     return (
         <div>
             <Navbar/>
@@ -44,6 +65,10 @@ LoginUser (email,password)
             <span className="label-text">Password</span>
           </label>
           <input type="password" placeholder="password" name='password' className="input input-bordered" required />
+          {
+            error.login && <label className='label text-sm font-semibold text-red-600'>
+             { error.login}</label>
+          }
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
@@ -51,7 +76,7 @@ LoginUser (email,password)
         <div className="form-control mt-6 flex">
           <button className="btn btn-primary">Login</button>
           <p className='text-center'>Or</p>
-          <button className="btn btn-primary"><span className='text-2xl'><AiFillGoogleCircle /></span>Login With Google</button>
+          <button onClick={handleGoogleLogin} className="btn btn-primary"><span className='text-2xl'><AiFillGoogleCircle /></span>Login With Google</button>
         </div>
         <p className='p-4 font-semibold'>Don't Have Account?<Link to='/register' className='text-blue-600 font-bold underline'>Register</Link></p>
       </form>
