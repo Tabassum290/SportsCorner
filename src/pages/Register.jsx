@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { AiFillGoogleCircle } from 'react-icons/ai';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const Register = () => {
+  const {createNewUser,setUser}=useContext(AuthContext);
     const handleRegister = e =>{
         e.preventDefault();
+        const name= e.target.name.value;
+        const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        const user = {email,password};
+        const user = {name,photo,email,password};
         console.log(user);
+ createNewUser(email,password)
+ .then(result =>{
+  setUser(result.user);
+  console.log(result.user);
+ })
+ .catch(error =>{
+  console.log(error.code)
+ })
     }
     return (
         <div>

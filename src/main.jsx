@@ -9,6 +9,7 @@ import AllSportsEquipment from './pages/AllSportsEquipment.jsx'
 import MyEquipmentlist from './pages/MyEquipmentlist.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
+import AuthProvider from './Providers/AuthProvider.jsx'
 
 const router = createBrowserRouter(
   [
@@ -43,6 +44,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <AuthProvider>
     <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </StrictMode>,
 )

@@ -30,8 +30,10 @@ const ExtraSection = () => {
 <p className='text-blue-700'>30% Off All Ski and Snowboard Equipment</p>
   </div>
 </div>
-           <div className="w-96 h-[400px] shadow-xl"  style={{ backgroundImage: `url(${image3})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-  <div className="card-body flex justify-center items-center mt-20">
+           <div className="w-96 h-[400px] shadow-xl bg-orange-700">
+    
+  <div className="card-body flex justify-center items-center">
+  <img className='h-[160px]' src="https://i.ibb.co.com/Fm1d9HJ/sports-equip-3.jpg" alt="" />
   <div className="badge badge-secondary">sale</div>
     <h2 className="card-title text-2xl text-center text-blue-900 font-bold">
     🔥 Free Shipping on Orders Over $75 with Code: FREESHIP🔥
