@@ -2,9 +2,10 @@ import React from 'react';
 
 const Loader = () => {
     return (
-        <div>
-            <span className="loading loading-spinner loading-lg"></span>
-        </div>
+        <div className="flex items-center justify-center h-screen">
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+      
     );
 };
 

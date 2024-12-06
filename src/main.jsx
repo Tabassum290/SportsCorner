@@ -29,10 +29,12 @@ const router = createBrowserRouter(
     {
       path:'/allsportsequipment',
       element:<AllSportsEquipment/>,
+      loader: () => fetch("http://localhost:4000/equipment")
     },
     {
       path:'/myequipmentlist',
       element:<PrivateRoute><MyEquipmentlist/></PrivateRoute>,
+      loader: () => fetch("http://localhost:4000/equipment")
     },
     {
       path:'/login',
