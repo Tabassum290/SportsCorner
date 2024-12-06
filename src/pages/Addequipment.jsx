@@ -33,10 +33,22 @@ fetch('http://localhost:4000/equipment',{
     console.log(data)
     if(data.insertedId){
         Swal.fire({
-            title: "Success",
-            text: "Your equipment has been added successfully.",
-            icon: "success",
-        })
+            title: "Are you sure?",
+            text: "You want to add this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Add it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Success",
+                text: "Your Equipment has been Added.",
+                icon: "success"
+              });
+            }
+          });
     }
 })
 
