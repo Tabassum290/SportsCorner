@@ -8,12 +8,18 @@ const AllSportsEquipment = () => {
     const loadedequipment = useLoaderData();
     const [equipments,setEquipments] = useState(loadedequipment);
 
-    const handleSort = () => {
-      const sortedEquipments = [...equipments].sort((a, b) => a.price - b.price);
-      setEquipments(sortedEquipments);
-    }
+    const handleSort = (order) => {
+      fetch(`http://localhost:4000/equipmentsort?sort=${order}`)
+          .then(res => res.json())
+          .then(data => {
+              setEquipments(data);
+          });
+  };
 
-    return (
+// const sortedEquipments = [...equipments].sort((a, b) => a.price - b.price);
+// setEquipments(sortedEquipments);
+
+return (
         <div>
             <Navbar/>
             <div className='my-8'>
@@ -44,7 +50,7 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
       clipRule="evenodd" />
   </svg>
 </label>
-<button onClick={handleSort} className='btn btn-primary w-2/3'>Sort By Price</button>
+<button  onClick={() => handleSort('asc')} className='btn btn-primary w-2/3'>Sort By Price</button>
 </div>
 <div className="overflow-x-auto">
   <table className="table table-zebra">
@@ -80,8 +86,7 @@ View Details </Link>
         </div>
             <Footer/>
         </div>
-
-    );
-};
+);
+}
 
 export default AllSportsEquipment;
