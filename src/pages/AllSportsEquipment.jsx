@@ -8,6 +8,12 @@ const AllSportsEquipment = () => {
     const loadedequipment = useLoaderData();
     const [equipments,setEquipments] = useState(loadedequipment);
     console.log(loadedequipment);
+
+    const handleSort = () => {
+      const sortedEquipments = [...equipments].sort((a, b) => a.price - b.price);
+      setEquipments(sortedEquipments);
+    }
+
     return (
         <div className='bg-blue-200'>
             <Navbar/>
@@ -24,9 +30,24 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
     />
 </div>
 </div>
- 
-            <section className='w-11/12 mx-auto'>
-            <div className="overflow-x-auto">
+<section className='w-11/12 mx-auto'>
+<div className='grid grid-cols-3 gap-6 my-6 justify-around'>
+<label className="input input-bordered flex items-center gap-2 col-span-2">
+  <input type="text" className='grow' placeholder="Search" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    className="h-4 w-4 opacity-70">
+    <path
+      fillRule="evenodd"
+      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+      clipRule="evenodd" />
+  </svg>
+</label>
+<button onClick={handleSort} className='btn btn-primary w-2/3'>Sort By Price</button>
+</div>
+<div className="overflow-x-auto">
   <table className="table table-zebra">
     {/* head */}
     <thead>

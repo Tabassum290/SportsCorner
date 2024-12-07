@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import Theme from './Theme';
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [showName, setShowName] = useState(false);
@@ -67,6 +68,7 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
   </div>
   <div className="navbar-end flex gap-4">
   <div className="navbar-end flex items-center gap-4">
+  <Theme/>
           <div className="avatar">
             <div className="w-8">
               {user && user?.email ? (
