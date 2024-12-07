@@ -47,9 +47,9 @@ toast.error("Login Failed. Please Try Again");
     return (
         <div>
             <Navbar/>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero min-h-screen">
   <div className="hero-content">
-    <div className="card bg-base-100 w-full shrink-0 shadow-2xl">
+    <div className="card bg-base-100 w-full shrink-0 shadow-2xl text-black">
     <div className="text-center px-16 mt-6">
       <h1 className="text-5xl font-bold">Login now!</h1>
     </div>

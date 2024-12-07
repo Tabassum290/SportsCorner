@@ -57,9 +57,7 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
       loop
       autoplay
     />
-
 </a>
-
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -68,7 +66,9 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
   </div>
   <div className="navbar-end flex gap-4">
   <div className="navbar-end flex items-center gap-4">
+  <div>
   <Theme/>
+</div>
           <div className="avatar">
             <div className="w-8">
               {user && user?.email ? (
@@ -98,7 +98,7 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
           ) : (
             <>
                <Link to="/login" className="btn">Login</Link> 
-               <Link to="/register" className='btn'>Register</Link>
+               <Link to="/register" className='btn text-center'>Register</Link>
             </>)}
         </div>
   </div>

@@ -16,21 +16,21 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
     />
 </div>
 </div>
-<p className="text-lg text-gray-600 text-center my-4">
+<p className="text-lg text-center my-4">
             Check out our latest sports equipment! Designed to boost your performance and keep you ahead in your game.
           </p>
-<section className='lg:w-2/3 mx-auto my-6 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 gap-6'>
+<section className='lg:w-2/3 mx-auto my-6 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 gap-6 '>
     <div >
-    <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-white px-16'>Cricket</button>
+    <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-blue-900 px-16'>Cricket</button>
     </div>
     <div >
-    <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-white px-16'>Football</button>
+    <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-blue-900 px-16'>Football</button>
     </div>
     <div >
-    <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-white px-16'>Tennis</button>
+    <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-blue-900 px-16'>Tennis</button>
     </div>
     <div >
-    <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-white px-16'>BasketBall</button>
+    <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-blue-900 px-16'>BasketBall</button>
     </div>
     <div>
     </div>
