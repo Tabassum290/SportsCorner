@@ -15,10 +15,9 @@ const ProductSection = () => {
   return (
     <div className="my-8">
       <section>
-
-        <Slide direction="up" cascade>
+       <Slide direction="right" cascade>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product, index) => (
+            {products.map(( product ) => (
               <Zoom>
                 <div className="card bg-gray-100 shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
                   <Fade>
