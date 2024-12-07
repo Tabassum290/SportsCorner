@@ -26,7 +26,7 @@ const Update = () => {
        const email = e.target.email.value;
        const updatedEquipment = {item,category,description,image,price,rating,time,customisation,stock,name,email};
 
-fetch(`http://localhost:4000/equipment/${_id}`,{
+fetch(`https://assignment-10-server-side-plum.vercel.app/equipment/${_id}`,{
     method:'PUT',
     headers: {
        'content-type':'application/json'

@@ -13,7 +13,7 @@ const MyEquipmentlist = () => {
    const userEquipments = equipments.filter(equipment => equipment.email === user?.email);
 
    const handleDelete = (id) => {
-    fetch(`http://localhost:4000/equipment/${id}`, { method: 'DELETE' })
+    fetch(`https://assignment-10-server-side-plum.vercel.app/equipment/${id}`, { method: 'DELETE' })
         .then((res) => res.json())
         .then((data) => {
             if (data.deletedCount > 0) {

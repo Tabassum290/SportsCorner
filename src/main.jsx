@@ -29,12 +29,12 @@ const router = createBrowserRouter(
     {
       path:'/allsportsequipment',
       element:<AllSportsEquipment/>,
-      loader: () => fetch("http://localhost:4000/equipment")
+      loader: () => fetch("https://assignment-10-server-side-plum.vercel.app/equipment")
     },
     {
       path:'/myequipmentlist',
       element:<PrivateRoute><MyEquipmentlist/></PrivateRoute>,
-      loader: () => fetch("http://localhost:4000/equipment")
+      loader: () => fetch("https://assignment-10-server-side-plum.vercel.app/equipment")
     },
     {
       path:'/login',
@@ -47,12 +47,12 @@ const router = createBrowserRouter(
     {
       path:'/viewdetails/:id',
       element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-      loader:({params})=> fetch(`http://localhost:4000/equipment/${params.id}`)
+      loader:({params})=> fetch(`https://assignment-10-server-side-plum.vercel.app/${params.id}`)
     },
     {
       path:'/update/:id',
       element:<PrivateRoute><Update/></PrivateRoute>,
-      loader:({params})=> fetch(`http://localhost:4000/equipment/${params.id}`)
+      loader:({params})=> fetch(`https://assignment-10-server-side-plum.vercel.app/${params.id}`)
     },
   ]
 )

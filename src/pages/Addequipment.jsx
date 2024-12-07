@@ -21,7 +21,7 @@ const Addequipment = () => {
        const email = e.target.email.value;
        const equipment = {item,category,description,image,price,rating,time,customisation,stock,name,email};
 
-fetch('http://localhost:4000/equipment',{
+fetch('https://assignment-10-server-side-plum.vercel.app/equipment',{
     method:'POST',
     headers: {
        'content-type':'application/json'

@@ -6,7 +6,7 @@ const ProductSection = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/equipmenthome?limit=6') 
+    fetch('https://assignment-10-server-side-plum.vercel.app/equipmenthome?limit=6') 
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error fetching products:', error));
