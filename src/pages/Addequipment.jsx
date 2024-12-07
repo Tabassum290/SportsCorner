@@ -20,7 +20,6 @@ const Addequipment = () => {
        const name = e.target.name.value;
        const email = e.target.email.value;
        const equipment = {item,category,description,image,price,rating,time,customisation,stock,name,email};
-       console.log(equipment);
 
 fetch('http://localhost:4000/equipment',{
     method:'POST',

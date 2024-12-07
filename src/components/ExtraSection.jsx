@@ -1,15 +1,13 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import React from 'react';
-
+import { Slide, Zoom } from 'react-awesome-reveal';
 const ExtraSection = () => {
-    const imageUrl = "https://i.ibb.co.com/NNJGzY2/sports-equip-2.jpg";
-    const image2 = "https://i.ibb.co.com/jVF5GGN/sports-equipment-1.jpg" ;
-    const image3 = "https://i.ibb.co.com/Fm1d9HJ/sports-equip-3.jpg";
     return (
         <div className='my-8'>
            <section>
-            <div className='text-center mb-4'>
-            <div className='lg:flex md:flex justify-center items-center'>
+  <div className='text-center mb-4'>
+    <Slide>
+    <div className='lg:flex md:flex justify-center items-center'>
               <h1 className='lg:text-3xl text-2xl  add text-center font-bold mt-6 lg:my-6'>🔥Seasonal Offers and Special Offers🔥</h1>
 <div className='flex justify-center items-center'>
 <DotLottieReact
@@ -20,9 +18,13 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
     />
 </div>
 </div>
+</Slide>
+
+
                 <p>Gear up for the winter season with our exclusive Winter Sports Gear Sale! Whether you're hitting the slopes, hitting the trails, or gearing up for your next adventure, we've got everything you need to stay at the top of your game</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+<Slide direction='up' cascade>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
            <div className="w-96 h-[400px] shadow-xl bg-blue-500">
   <div className="card-body flex justify-center items-center">
     <img className='h-[160px]' src="https://i.ibb.co.com/jVF5GGN/sports-equipment-1.jpg" alt="" />
@@ -55,9 +57,12 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
   </div>
 </div>
 </div>
+</Slide>
+
 </section>
 <section className='my-8 rounded-lg p-8 text-white'>
-<div className='lg:flex md:flex justify-center items-center'>
+  <Slide>
+  <div className='lg:flex md:flex justify-center items-center'>
               <h1 className='lg:text-3xl text-2xl text-blue-600 add text-center font-bold mt-6'>🔥Updated Sporting News and Updates🔥</h1>
 <div className='flex justify-center items-center'>
 <DotLottieReact
@@ -68,9 +73,9 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
     />
 </div>
 </div>
- <div className='text-center mb-4 '>
- </div>
- <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 bg-blue-700 p-8 rounded-lg'>
+  </Slide>
+  <Zoom>
+  <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 bg-blue-700 p-8 rounded-lg'>
   <div>
   <h1 className='text-xl font-bold'>Exciting Updates at Our Store!</h1>
   <p>We're thrilled to announce the latest updates and additions to our sports equipment store! Whether you're an avid athlete or just getting started, we've got something for everyone.</p>
@@ -88,6 +93,8 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
   <p>At our store, we pride ourselves on providing top-tier customer service, fast shipping, and an expansive selection of sports equipment. Whether you're buying gear for a new sport or upgrading your current setup, we're here to help you every step of the way.</p>
   </div>
  </div>
+  </Zoom>
+ 
 </section>
 </div>
     );

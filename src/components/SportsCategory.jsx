@@ -1,10 +1,12 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { Slide, Zoom } from 'react-awesome-reveal';
 
 
 const SportsCategory = () => {
 
     return (
         <div>
+            <Slide direction='left'>
             <div className='lg:flex md:flex justify-center items-center'>
               <h1 className='lg:text-3xl text-2xl  add text-center font-bold mt-6 text-blue-500'>Our Sports Equipments</h1>
         <div className='flex justify-center items-center'>
@@ -19,7 +21,9 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
 <p className="text-lg text-center my-4">
             Check out our latest sports equipment! Designed to boost your performance and keep you ahead in your game.
           </p>
-<section className='lg:w-2/3 mx-auto my-6 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 gap-6 '>
+            </Slide>
+            <Zoom>
+            <section className='lg:w-2/3 mx-auto my-6 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 gap-6 '>
     <div >
     <button className='btn bg-blue-300 border-2 border-blue-900  rounded-3xl p-4 text-blue-900 px-16'>Cricket</button>
     </div>
@@ -35,6 +39,9 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
     <div>
     </div>
 </section>
+            </Zoom>
+ 
+
  </div>
     );
 };

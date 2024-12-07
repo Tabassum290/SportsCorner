@@ -17,8 +17,6 @@ const navigate = useNavigate();
         const email = e.target.email.value;
         const password = e.target.password.value;
         const user = {email,password};
-        console.log(user);
-
 LoginUser (email,password)
 .then(result =>{
   setUser(result.user);

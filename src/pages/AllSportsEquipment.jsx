@@ -7,7 +7,6 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 const AllSportsEquipment = () => {
     const loadedequipment = useLoaderData();
     const [equipments,setEquipments] = useState(loadedequipment);
-    console.log(loadedequipment);
 
     const handleSort = () => {
       const sortedEquipments = [...equipments].sort((a, b) => a.price - b.price);

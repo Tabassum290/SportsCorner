@@ -29,7 +29,6 @@ const Register = () => {
           }));
           return;
         }
-        console.log(user);
  createNewUser(email,password)
  .then(result =>{
   setUser(result.user);

@@ -7,7 +7,6 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const ViewDetails = () => {
     const data = useLoaderData();
-    console.log(data)
     const {_id,item,category,description,image,price,rating,time,customisation,stock,name,email} = data;
     return (
         <div>

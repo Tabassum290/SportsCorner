@@ -10,7 +10,7 @@ const Update = () => {
     const equipment = useLoaderData();
     const {user}= useContext(AuthContext);
     const {_id,item,category,description,image,price,rating,time,customisation,stock,name,email} = equipment;
-    console.log(equipment)
+  
     const handleUpdate = (e)=>{
         e.preventDefault();
        const item = e.target.item.value;
@@ -25,7 +25,6 @@ const Update = () => {
        const name = e.target.name.value;
        const email = e.target.email.value;
        const updatedEquipment = {item,category,description,image,price,rating,time,customisation,stock,name,email};
-       console.log(equipment);
 
 fetch(`http://localhost:4000/equipment/${_id}`,{
     method:'PUT',
@@ -36,7 +35,6 @@ fetch(`http://localhost:4000/equipment/${_id}`,{
 })
 .then(res=> res.json())
 .then(data=>{
-    console.log(data)
     if(data.modifiedCount > 0 ){
         Swal.fire({
             title: "Are you sure?",
