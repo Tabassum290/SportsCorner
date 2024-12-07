@@ -15,11 +15,11 @@ const AllSportsEquipment = () => {
     }
 
     return (
-        <div className='bg-blue-200'>
+        <div>
             <Navbar/>
             <div className='my-8'>
               <div className='lg:flex md:flex justify-center items-center'>
-              <h1 className='lg:text-3xl text-2xl  add text-center font-bold mt-6'>All Equipments : {equipments.length}
+              <h1 className='lg:text-3xl text-2xl  add text-center font-bold mt-6 lg:my-6'>All Equipments : {equipments.length}
                </h1>
 <div className='flex justify-center items-center'>
 <DotLottieReact
@@ -30,7 +30,7 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
     />
 </div>
 </div>
-<section className='w-11/12 mx-auto'>
+<section className='w-11/12 mx-auto bg-blue-200 p-6 rounded-lg all'>
 <div className='grid grid-cols-3 gap-6 my-6 justify-around'>
 <label className="input input-bordered flex items-center gap-2 col-span-2">
   <input type="text" className='grow' placeholder="Search" />

@@ -23,7 +23,7 @@ const Equipmentcards = ({equipment,onDelete}) => {
 
     return (
         <div className='w-11/12 mx-auto'>
-<div className="card card-compact bg-gray-200 w-96 shadow-xl my-8">
+<div className="card card-compact bg-gray-200 w-96 shadow-xl my-8 text-black">
   <figure>
     <img className='h-[280px] p-4'
       src={image}

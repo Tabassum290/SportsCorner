@@ -27,7 +27,7 @@ const MyEquipmentlist = () => {
 };
 
     return (
-        <div className='bg-blue-100'>
+        <div>
             <Navbar/>
             <div className='flex justify-center items-center'>
               <h1 className='lg:text-3xl text-2xl  add text-center font-bold my-6'>My Equipment List</h1>

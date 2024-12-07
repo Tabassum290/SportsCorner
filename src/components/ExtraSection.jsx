@@ -58,7 +58,7 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
 </section>
 <section className='my-8 rounded-lg p-8 text-white'>
 <div className='lg:flex md:flex justify-center items-center'>
-              <h1 className='lg:text-3xl text-2xl text-black  add text-center font-bold mt-6'>🔥Updated Sporting News and Updates🔥</h1>
+              <h1 className='lg:text-3xl text-2xl text-blue-600 add text-center font-bold mt-6'>🔥Updated Sporting News and Updates🔥</h1>
 <div className='flex justify-center items-center'>
 <DotLottieReact
 className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'

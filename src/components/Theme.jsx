@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Theme = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+const handleTheme = e =>{
+  const isDark =e.target.checked; 
+  setIsDarkMode(isDark);
+  if (isDark) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+}
     return (
         <div>
             <label className="swap swap-rotate">
   {/* this hidden checkbox controls the state */}
-  <input type="checkbox" className="theme-controller" value="synthwave" />
+  <input
+  onChange={handleTheme}
+  type="checkbox" checked={isDarkMode} className="theme-controller" />
 
   {/* sun icon */}
   <svg

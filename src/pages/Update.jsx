@@ -63,7 +63,7 @@ fetch(`http://localhost:4000/equipment/${_id}`,{
 
 
     return (
-        <div className='bg-blue-200'>
+        <div>
         <Navbar/>
         <div className='lg:flex md:flex justify-center items-center'>
               <h1 className='lg:text-3xl text-2xl  add text-center font-bold mt-6 mb-4'>Update Equipment : {item}</h1>
@@ -77,7 +77,7 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
 </div>
 </div>
 
-  <form onSubmit={handleUpdate} className='w-11/12 mx-auto border-2 border-blue-900 rounded-lg p-6 mb-8'>
+  <form onSubmit={handleUpdate} className='w-11/12 mx-auto border-2 border-blue-900 rounded-lg p-6 mb-8 bg-blue-200'>
   <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 <div className='mb-8'>
 <label className="form-control w-full max-w-xs">
