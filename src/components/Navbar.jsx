@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
-
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [showName, setShowName] = useState(false);
@@ -20,6 +20,9 @@ const handleMouseEnter = () => {
 const handleMouseLeave = () => {
   setShowName(false);
 };
+
+
+
     return (
         <div className='sticky z-10 top-0'>
             <div className="navbar bg-blue-800 text-white font-semibold">
@@ -45,7 +48,17 @@ const handleMouseLeave = () => {
         {links}
       </ul>
     </div>
-    <a className="lg:text-xl text-md sports">Sports Corner</a>
+
+<a className="lg:text-xl text-md flex justify-center items-center italic"><span>Sports Corner</span>
+<DotLottieReact
+className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
+      src="https://lottie.host/d41e40b4-cc5b-413e-a072-a3cb4f26a020/XgyTJ0qhwN.lottie"
+      loop
+      autoplay
+    />
+
+</a>
+
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -88,8 +101,7 @@ const handleMouseLeave = () => {
         </div>
   </div>
 </div>
-            
-        </div>
+</div>
     );
 };
 

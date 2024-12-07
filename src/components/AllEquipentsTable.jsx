@@ -4,7 +4,8 @@ const AllEquipentsTable = () => {
     return (
         <div>
      <div className='bg-blue-200'>
-            <h1 className='text-3xl font-bold text-center my-8 add'>All Equipments :{equipment.length} </h1>
+
+
             <section className='w-11/12 mx-auto'>
             <div className="overflow-x-auto">
   <table className="table table-zebra">
@@ -44,7 +45,7 @@ const AllEquipentsTable = () => {
 </div>
             </section>
         </div>
-            
+  </div>          
         </div>
     );
 };

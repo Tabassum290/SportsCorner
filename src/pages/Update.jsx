@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Update = () => {
     const equipment = useLoaderData();
@@ -64,7 +65,17 @@ fetch(`http://localhost:4000/equipment/${_id}`,{
     return (
         <div className='bg-blue-200'>
         <Navbar/>
-        <h1 className='text-4xl font-bold add text-center my-8'>Update Equipment : {item}</h1>
+        <div className='lg:flex md:flex justify-center items-center'>
+              <h1 className='lg:text-3xl text-2xl  add text-center font-bold mt-6 mb-4'>Update Equipment : {item}</h1>
+<div className='flex justify-center items-center'>
+<DotLottieReact
+className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
+      src="https://lottie.host/d41e40b4-cc5b-413e-a072-a3cb4f26a020/XgyTJ0qhwN.lottie"
+      loop
+      autoplay
+    />
+</div>
+</div>
 
   <form onSubmit={handleUpdate} className='w-11/12 mx-auto border-2 border-blue-900 rounded-lg p-6 mb-8'>
   <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

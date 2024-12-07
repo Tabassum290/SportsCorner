@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import { useLoaderData } from 'react-router-dom';
 import Equipmentcards from '../components/Equipmentcards';
 import { AuthContext } from '../Providers/AuthProvider';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 const MyEquipmentlist = () => {
    const loadedequipments = useLoaderData();
    const { user } = useContext(AuthContext);
@@ -28,7 +29,17 @@ const MyEquipmentlist = () => {
     return (
         <div>
             <Navbar/>
-            <h1 className='text-3xl font-bold text-center my-8 add'>My Equipment List</h1>
+            <div className='flex justify-center items-center'>
+              <h1 className='lg:text-3xl text-2xl  add text-center font-bold my-6'>My Equipment List</h1>
+<div className='flex justify-center items-center'>
+<DotLottieReact
+className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
+      src="https://lottie.host/d41e40b4-cc5b-413e-a072-a3cb4f26a020/XgyTJ0qhwN.lottie"
+      loop
+      autoplay
+    />
+</div>
+</div>
     
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 {
