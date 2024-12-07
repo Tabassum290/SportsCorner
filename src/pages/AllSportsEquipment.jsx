@@ -36,8 +36,8 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
     />
 </div>
 </div>
-<section className='w-11/12 mx-auto bg-blue-200 p-6 rounded-lg all'>
-<div className='grid grid-cols-3 gap-6 my-6 justify-around'>
+<section className='w-11/12 mx-auto bg-blue-200 lg:p-8 p-4 rounded-lg all text-black'>
+<div className='grid grid-cols-3 lg:gap-6 gap-2 my-6 justify-around'>
 <label className="input input-bordered flex items-center gap-2 col-span-2">
   <input type="text" className='grow' placeholder="Search" />
   <svg
@@ -51,7 +51,7 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
       clipRule="evenodd" />
   </svg>
 </label>
-<button   onClick={()=> handleSort()} className='btn btn-primary w-2/3'>  Sort By Price</button>
+<button   onClick={()=> handleSort()} className='btn btn-primary lg:w-2/3'>Sort By Price</button>
 </div>
 <div className="overflow-x-auto">
   <table className="table table-zebra">
