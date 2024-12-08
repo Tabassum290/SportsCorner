@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 
 const Register = () => {
-  const {createNewUser,setUser,updateUserProfile,loginWithGoogle}=useContext(AuthContext);
+  const {createNewUser,setUser,updateUserProfile,loginWithGoogle}= useContext(AuthContext);
   const [error,setError] = useState({});
   const navigate = useNavigate();
     const handleRegister = e =>{
@@ -42,22 +42,9 @@ const Register = () => {
  })
  .catch(err =>{
   setError({...error, register: err.code});
-  toast.error('Registration failed. Please try again.');
+  toast.error(`Registration failed: ${err.message}`);
  })
 }
-
-const handleGoogleLogin = () => {
-  loginWithGoogle()
-    .then((result) => {
-      setUser(result.user);
-      toast.success('Successfully logged in with Google!');
-      const redirectPath = location?.state?.from?.pathname || '/';
-      navigate(redirectPath);
-    })
-    .catch((err) => {
-      toast.error(`Google login failed: ${err.message}`);
-    });
-};
 
 const handleGoogleRegister= () => {
   loginWithGoogle()
