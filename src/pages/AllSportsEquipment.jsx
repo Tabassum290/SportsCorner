@@ -9,13 +9,13 @@ const AllSportsEquipment = () => {
     const [equipments,setEquipments] = useState(loadedequipment);
 
     const handleSort = () => {
-      const sortedEquipments = [...equipments].sort((a, b) => a.price - b.price);
-      setEquipments(sortedEquipments);
-      // fetch(`http://localhost:4000/equipmentsort?sort=${order}`)
-      //     .then(res => res.json())
-      //     .then(data => {
-      //         setEquipments(data);
-      //     });
+      // const sortedEquipments = [...equipments].sort((a, b) => a.price - b.price);
+      // setEquipments(sortedEquipments);
+      fetch('http://localhost:4000/equipmentsort')
+          .then(res => res.json())
+          .then(data => {
+              setEquipments(data);
+          });
   };
 
 

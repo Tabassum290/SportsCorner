@@ -19,11 +19,9 @@ className='lg:h-[60px] lg:w-[120px] w-[50px] h-[40px]'
 </div>
 </div>
 </Slide>
-
-
-                <p>Gear up for the winter season with our exclusive Winter Sports Gear Sale! Whether you're hitting the slopes, hitting the trails, or gearing up for your next adventure, we've got everything you need to stay at the top of your game</p>
-            </div>
-<Slide direction='up' cascade>
+ <p>Gear up for the winter season with our exclusive Winter Sports Gear Sale! Whether you're hitting the slopes, hitting the trails, or gearing up for your next adventure, we've got everything you need to stay at the top of your game</p>
+ </div>
+<Slide direction='left' cascade>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
            <div className="w-96 h-[400px] shadow-xl bg-blue-500">
   <div className="card-body flex justify-center items-center">
