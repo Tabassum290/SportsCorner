@@ -31,3 +31,6 @@ body {
     font-size:medium; 
 }
 
+.slide {
+  scroll-behavior: smooth;
+}

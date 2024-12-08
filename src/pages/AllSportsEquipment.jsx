@@ -9,16 +9,12 @@ const AllSportsEquipment = () => {
     const [equipments,setEquipments] = useState(loadedequipment);
 
     const handleSort = () => {
-      // const sortedEquipments = [...equipments].sort((a, b) => a.price - b.price);
-      // setEquipments(sortedEquipments);
-      fetch('http://localhost:4000/equipmentsort')
+      fetch('https://assignment-10-server-side-plum.vercel.app/equipmentsort')
           .then(res => res.json())
           .then(data => {
               setEquipments(data);
           });
   };
-
-
 
 return (
         <div>

@@ -8,7 +8,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 const MyEquipmentlist = () => {
    const loadedequipments = useLoaderData();
    const { user } = useContext(AuthContext);
-    const [equipments,setEquipments] = useState(loadedequipments);
+   const [equipments,setEquipments] = useState(loadedequipments);
 
    const userEquipments = equipments.filter(equipment => equipment.email === user?.email);
 
