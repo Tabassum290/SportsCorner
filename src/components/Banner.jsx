@@ -25,7 +25,7 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div id="slide-1" data-aos="fade-up" className="flex justify-around h-64 bg-blue-700 text-white lg:p-8 p-4 rounded-lg ">
+                    <div id="slide-1" data-aos="fade-up" className="flex justify-around h-64 bg-blue-700 text-white p-4 rounded-lg ">
                        <img className='lg:w-[400px] w-1/2 object-cover rounded-3xl p-4' src="https://i.ibb.co.com/NNJGzY2/sports-equip-2.jpg" alt="" />
                        <div className='flex flex-col items-center justify-center'>
                        <h2 className="text-3xl font-bold text-white">Welcome to Our Website</h2>
@@ -37,7 +37,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div id="slide-2" data-aos="fade-up" className="flex justify-around h-64 bg-blue-700 text-white lg:p-8 p-4 rounded-lg ">
+                    <div id="slide-2" data-aos="fade-up" className="flex justify-around h-64 bg-blue-700 text-white p-4 rounded-lg ">
                         <img className='lg:w-[400px] w-1/2 object-cover rounded-3xl p-4' src="https://i.ibb.co.com/jVF5GGN/sports-equipment-1.jpg" alt="" />
                         <div className='flex flex-col justify-center'>
                     <h2 className="text-3xl font-bold">Join Our Platform</h2>
@@ -49,7 +49,7 @@ const Banner = () => {
                      </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div id="slide-3" data-aos="fade-up" className="flex justify-around h-64 bg-blue-700 text-white lg:p-8 p-4 rounded-lg">
+                    <div id="slide-3" data-aos="fade-up" className="flex justify-around h-64 bg-blue-700 text-white p-4 rounded-lg">
                       <img className='lg:w-[400px] w-1/2 rounded-3xl p-4' src="https://i.ibb.co.com/Fm1d9HJ/sports-equip-3.jpg" alt="" />
                       <div className='flex flex-col justify-center'>
                     <h2 className="text-3xl font-bold">Stay Connected</h2>
