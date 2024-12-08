@@ -184,7 +184,7 @@ defaultValue={price} className="input input-bordered w-full max-w-xs" />
 </div>
 </section>
 <div className='flex justify-center'>
-<button className='btn btn-primary text-white w-1/4'>Update Equipment</button>
+<button className='btn btn-primary text-white lg:w-1/4'>Update Equipment</button>
 </div>
 </form>
 
