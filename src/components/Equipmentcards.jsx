@@ -27,7 +27,7 @@ const Equipmentcards = ({equipment,onDelete}) => {
   <figure>
     <img className='h-[280px] p-4'
       src={image}
-      alt="Shoes" />
+      alt="Equipment Image" />
   </figure>
   <div className="card-body">
     <h2 className="card-title">{item}</h2>
