@@ -34,3 +34,9 @@
 -   react-tooltip: ^5.28.0,
 -    sweetalert2: ^11.6.13,
 -    swiper: ^11.1.15
+# Follow these steps to run this Website :
+- 1: Clone The Repository
+- 2: npm install 
+- 3: Install the dependencies 
+- 4: Set up environment Variables
+- 7: Also Follow the above steps for backend .
